@@ -37,7 +37,7 @@ nordvpn login
 nordvpn set autoconnect on
 nordvpn set technology nordlynx
 nordvpn set killswitch on
-nordvpn set lan_access on
+nordvpn whitelist add subnet 192.168.56.0/24
 
 # 6) Tests
 # Access test

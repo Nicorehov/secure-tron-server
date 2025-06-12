@@ -14,7 +14,7 @@ git clone https://github.com/Nicorehov/secure-tron-server.git secure_tron
 ```
 3. On each VM, run:
 ```bash
-cd ~/secure-tron/ #folder host or java
+cd ~/secure_tron/ #folder host or java
 chmod +x *.sh
 sudo ./<script_name>.sh
 ```
