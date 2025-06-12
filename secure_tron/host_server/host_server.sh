@@ -27,7 +27,7 @@ sudo ip addr add ${HOST_IP}/24 dev ${IFACE}
 sudo ufw reset
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow 22/tcp
+sudo ufw allow in on ${IFACE} to any port 22 proto tcp
 sudo ufw enable
 
 # 5) Install and setup nordvpn
@@ -37,6 +37,7 @@ nordvpn login
 nordvpn set autoconnect on
 nordvpn set technology nordlynx
 nordvpn set killswitch on
+nordvpn set lan_access on
 
 # 6) Tests
 # Access test

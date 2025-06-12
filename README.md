@@ -7,9 +7,14 @@
    - tron-vps   (Java-Tron-Lite)
 
 2. Copy the `host-server/` and `tron-vps/` directories to the corresponding VMs.
+```bash
+sudo apt update && sudo apt install -y git
+cd /home/$(whoami)
+git clone https://github.com/Nicorehov/secure-tron-server.git secure_tron
+```
 3. On each VM, run:
 ```bash
-cd ~/secure-tron/<host-server or tron-vps>
+cd ~/secure-tron/ #folder host or java
 chmod +x *.sh
 sudo ./<script_name>.sh
 ```
@@ -26,6 +31,11 @@ JAVA_TRON_JAR="java-tron-lite.jar"
 CONFIG_FILE="config.conf"
 ```
 Edit these values ​​before running.
+```bash
+cd ~/secure_tron/host_server
+nano host_server.sh
+# same with java_tron_light
+```
 
 ## Verification
 - **SSH-only**: `report/ssh-key-test.txt` contains `SSH key auth OK`.
